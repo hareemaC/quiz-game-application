@@ -1,0 +1,139 @@
+What does CPU stand for?
+Central Processing Unit
+Computer Personal Unit
+Central Program Unit
+Control Processing Unit
+ Central Processing Unit
+
+Which device is used to point and click on a computer screen?
+Keyboard
+Mouse
+Printer
+Scanner
+ Mouse
+
+Which is an input device?
+Monitor
+Printer
+Keyboard
+Speaker
+ Keyboard
+
+What does RAM stand for?
+Random Access Memory
+Read Access Memory
+Run All Memory
+Read Any Memory
+Random Access Memory
+
+Which of these is an example of software?
+Mouse
+Monitor
+Microsoft Word
+Printer
+ Microsoft Word
+
+Which part of the computer stores data permanently?
+RAM
+ROM
+Cache
+Register
+ ROM
+
+Which is used to display information on a computer?
+Keyboard
+Monitor
+Mouse
+Scanner
+ Monitor
+
+What is the brain of the computer?
+CPU
+Hard Disk
+RAM
+Keyboard
+ CPU
+
+Which of these is a programming language?
+HTML
+Windows
+Linux
+Printer
+ HTML
+
+What is the main function of the operating system?
+Manage hardware and software
+Write documents
+Print files
+Design websites
+ Manage hardware and software
+
+Which device is used to store large amounts of data permanently?
+RAM
+Hard Disk
+CPU
+Keyboard
+ Hard Disk
+
+Which of the following is an output device?
+Keyboard
+Mouse
+Monitor
+Scanner
+ Monitor
+
+What is the full form of URL?
+Uniform Resource Locator
+Uniform Reference Link
+Unique Resource Locator
+Universal Reference Link
+ Uniform Resource Locator
+
+Which key combination is used to copy text?
+Ctrl + X
+Ctrl + C
+Ctrl + V
+Ctrl + Z
+ Ctrl + C
+
+What type of software is Microsoft Excel?
+Operating System
+Application Software
+Utility Software
+Programming Software
+ Application Software
+
+Which memory is volatile?
+RAM
+ROM
+Hard Disk
+CD-ROM
+RAM
+
+Which device is used to read barcodes?
+Scanner
+Printer
+Mouse
+Monitor
+ Scanner
+
+What is the shortcut for undo operation?
+Ctrl + Y
+Ctrl + Z
+Ctrl + X
+Ctrl + C
+ Ctrl + Z
+
+What is the main function of a router?
+To process data
+To manage printer
+To connect networks
+To display information
+ To connect networks
+
+Which of these is an example of an operating system?
+Windows 10
+Microsoft Word
+Python
+Google Chrome
+ Windows 10
