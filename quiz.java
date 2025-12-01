@@ -1,18 +1,19 @@
+import java.io.*;
 import java.util.Scanner;
 // quiz method will receive the specific file (chosen by the user's requirements) as an argument
 
 public class quiz {
-    private static final int TOTAL_TIME = 600; // 10 minutes in seconds
+    private static final int TOTAL_TIME = 600;
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         long startTime = System.currentTimeMillis();
-        int totalQuestions = 3; // example, later you’ll load from file
+        int totalQuestions = 10;
 
         System.out.println("Your 10 minutes begin now!");
         for (int i = 1; i <= totalQuestions; i++) {
-            // Check if time is up before asking next question
+        
             long elapsed = (System.currentTimeMillis() - startTime) / 1000;
             long remaining = TOTAL_TIME - elapsed;
 
@@ -24,6 +25,12 @@ public class quiz {
             long minutes = remaining / 60;
             long seconds = remaining % 60;
             System.out.printf("⏱️ Time left: %02d:%02d\n", minutes, seconds);
+            //open file
+            try{
+            BufferedReader reader = new BufferedReader(new FileReader("comp easy.txt"));
+            }catch(FileNotFoundException e){
+                System.out.println("File not found");
+            }
             // Ask question
 
         }
