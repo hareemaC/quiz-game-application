@@ -19,13 +19,13 @@ public class quiz {
             long remaining = TOTAL_TIME - elapsed;
 
             if (remaining <= 0) {
-                System.out.println("\n⏰ Time is up! Quiz over.");
+                System.out.println("\n Time is up! Quiz over.");
                 break;
             }
 
             long minutes = remaining / 60;
             long seconds = remaining % 60;
-            System.out.printf("⏱️ Time left: %02d:%02d\n", minutes, seconds);
+            System.out.printf("Time left: %02d:%02d\n", minutes, seconds);
             try{
                 //open file
                 File obj = new File("comp easy.txt");
@@ -35,7 +35,7 @@ public class quiz {
                 
                 //print the question and choices to user
                 String line = "";
-                while(line != Qnum){
+                while(line != Qnum || Reader.hasNextLine()){
                     line = Reader.nextLine();
                 }
                 String Question = Reader.nextLine();
@@ -49,16 +49,36 @@ public class quiz {
                 System.out.println("B) " + choice2);
                 System.out.println("C) " + choice3);
                 System.out.println("D) " + choice4);
-                System.out.println("You Answer (A, B, C or D): ");
                 //take user's answers
-                char choice = input.next().charAt(0);
+                String userAnswer = "";
+                while(userAnswer == ""){
+                    System.out.println("You Answer (A, B, C or D): ");
+                    char choice = input.next().charAt(0);
+                    if(choice == 'a' || choice == 'A'){
+                        userAnswer = choice1;
+                    }
+                    else if(choice == 'b' || choice == 'B'){
+                        userAnswer = choice2;
+                    }
+                    else if(choice == 'c' || choice == 'C'){
+                        userAnswer = choice3;
+                    }
+                    else if(choice == 'd' || choice == 'D'){
+                        userAnswer = choice4;
+                    }
+                    else{
+                        System.out.println("Invalid input. Enter again.");
+                        userAnswer = "";
+                    }
+                }
                 //store question, correct answer and user's answer in a 2D array
-                
                 String[][] dataArr = new String[10][3];
-            }catch(FileNotFoundException e){
+                dataArr[i-1][0] = Question;
+                dataArr[i-1][1] = answer;
+                dataArr[i-1][2] = userAnswer;
+            }catch(IOException e){
                 System.out.println("File not found");
-            }
-            
+            }  
 
         }
 
