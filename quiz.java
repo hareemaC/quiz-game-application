@@ -12,6 +12,7 @@ public class quiz {
         int totalQuestions = 10;
 
         System.out.println("Your 10 minutes begin now!");
+        //control loop using time and questions<10
         for (int i = 1; i <= totalQuestions; i++) {
         
             long elapsed = (System.currentTimeMillis() - startTime) / 1000;
@@ -25,13 +26,39 @@ public class quiz {
             long minutes = remaining / 60;
             long seconds = remaining % 60;
             System.out.printf("⏱️ Time left: %02d:%02d\n", minutes, seconds);
-            //open file
             try{
-            BufferedReader reader = new BufferedReader(new FileReader("comp easy.txt"));
+                //open file
+                File obj = new File("comp easy.txt");
+                Scanner Reader = new Scanner(obj);
+                //choose random question from the file
+                String Qnum = Integer.toString((int)(Math.random() * 10) + 1);
+                
+                //print the question and choices to user
+                String line = "";
+                while(line != Qnum){
+                    line = Reader.nextLine();
+                }
+                String Question = Reader.nextLine();
+                String choice1 = Reader.nextLine();
+                String choice2 = Reader.nextLine();
+                String choice3 = Reader.nextLine();
+                String choice4 = Reader.nextLine();
+                String answer = Reader.nextLine();
+                System.out.println("Q " + i + ". "+Question + "?");
+                System.out.println("A) " + choice1);
+                System.out.println("B) " + choice2);
+                System.out.println("C) " + choice3);
+                System.out.println("D) " + choice4);
+                System.out.println("You Answer (A, B, C or D): ");
+                //take user's answers
+                char choice = input.next().charAt(0);
+                //store question, correct answer and user's answer in a 2D array
+                
+                String[][] dataArr = new String[10][3];
             }catch(FileNotFoundException e){
                 System.out.println("File not found");
             }
-            // Ask question
+            
 
         }
 
@@ -40,13 +67,5 @@ public class quiz {
         System.out.printf("\nYou took %.2f seconds.\n", timeTaken);
     }
 }
-
-
-    //open file
-    //control loop using time and questions<10
-    //choose random question from the file
-    //print the question and choices to user
-    //take user's answers
-    //store question, correct answer and user's answer in a 2D array
     //send the array to the result method
     //send time taken to the result method
