@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.*;
 
-public class Pffinal {
+public class QuizGameApplication {
 
     static Scanner sc = new Scanner(System.in);
     static String filePath = "D:\\semester 1\\pf\\lab work\\project final\\users.txt";
@@ -200,4 +200,5 @@ public class Pffinal {
         return time;
     }
 }
+
 
