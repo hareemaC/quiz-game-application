@@ -163,11 +163,21 @@ public class QuizGameApplication {
             sc.nextLine();
 
             switch (choice) {
-                case 1: topic = "Science"; break;
-                case 2: topic = "Math"; break;
-                case 3: topic = "Computer"; break;
-                case 4: topic = "English"; break;
-                case 5: topic = "General"; break;
+                case 1:
+                    topic = "Science";
+                    break;
+                case 2:
+                    topic = "Math"; 
+                    break;
+                case 3:
+                    topic = "Computer";
+                    break;
+                case 4:
+                    topic = "English";
+                    break;
+                case 5:
+                    topic = "General"; 
+                    break;
                 default: System.out.println("Invalid topic! Try again.");
             }
         } while (topic.equals(""));
@@ -190,9 +200,15 @@ public class QuizGameApplication {
             sc.nextLine();
 
             switch (choice) {
-                case 1: time = 15; System.out.println("You chose: Easy level"); break;
-                case 2: time = 12; System.out.println("You chose: Medium level"); break;
-                case 3: time = 10; System.out.println("You chose: Hard level"); break;
+                case 1:
+                    time = 15; System.out.println("You chose: Easy level");
+                    break;
+                case 2: 
+                    time = 12; System.out.println("You chose: Medium level");
+                    break;
+                case 3:
+                    time = 10; System.out.println("You chose: Hard level"); 
+                    break;
                 default: System.out.println("Invalid level! Try again.");
             }
         } while (time == 0);
@@ -200,5 +216,6 @@ public class QuizGameApplication {
         return time;
     }
 }
+
 
 
