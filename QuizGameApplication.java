@@ -262,6 +262,7 @@ public class QuizGameApplication {
         else{
             questionsAccessed = 40;
         }
+        TOTAL_TIME = TOTAL_TIME * 60;
         long startTime = System.currentTimeMillis();
         int totalQuestions = 10;
         //control loop using time and questions<10
@@ -329,7 +330,6 @@ public class QuizGameApplication {
         long endTime = System.currentTimeMillis();
         double timeTaken = (endTime - startTime) / 1000.0;
         System.out.printf("\nYou took %.2f seconds.\n", timeTaken);
-        input.close();
         result(dataArr, timeTaken, TOTAL_TIME);
     }
 
@@ -398,7 +398,6 @@ public class QuizGameApplication {
                 }
             }  
         }
-        input.close();
     }
 }
 
