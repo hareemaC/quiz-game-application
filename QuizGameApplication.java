@@ -141,13 +141,13 @@ public class QuizGameApplication {
             System.out.println("\nStarting quiz on: " + topic);
             System.out.println("You have " + time + " minutes.");
             // Here you can add quiz questions later
-            String[][] arr = quiz(topic,time);
-            result(arr);
+            quiz(time);
             System.out.print("\nDo you want to play again? (yes/no): ");
             playAgain = sc.nextLine().toLowerCase();
         } while (playAgain.equals("yes"));
     }
 
+    static String fileName = "";
     // ---------------- CHOOSE TOPIC ----------------
     public static String chooseTopic() {
         String topic = "";
@@ -166,18 +166,23 @@ public class QuizGameApplication {
             switch (choice) {
                 case 1:
                     topic = "Science";
+                    fileName = "scientific.txt";
                     break;
                 case 2:
                     topic = "Math"; 
+                    fileName = "math.txt";
                     break;
                 case 3:
                     topic = "Computer";
+                    fileName = "comp.txt";
                     break;
                 case 4:
                     topic = "English";
+                    fileName = "eng.txt";
                     break;
                 case 5:
                     topic = "General"; 
+                    fileName = "general.txt";
                     break;
                 default: System.out.println("Invalid topic! Try again.");
             }
@@ -217,13 +222,13 @@ public class QuizGameApplication {
         return time;
     }
 
-
+        // questions method will receive the specific file (chosen by the user's requirements) as an argument
     public static String[][] getQuestions(){
-        String[][] questions = new String[10][7];
+        String[][] questions = new String[40][7];
         try{
-            BufferedReader br = new BufferedReader(new FileReader("comp easy.txt"));
+            BufferedReader br = new BufferedReader(new FileReader(fileName));
             int index = 0;
-            while(index < 10){
+            while(index < 40){
                 questions[index][0] = br.readLine();
                 questions[index][1] = br.readLine();
                 questions[index][2] = br.readLine();
@@ -240,19 +245,25 @@ public class QuizGameApplication {
         return questions;
     }
 
-    // quiz method will receive the specific file (chosen by the user's requirements) as an argument
     // if level is easy only first 10 questions 
     //send the array to the result method
     //send time taken to the result method
-    public static String[][] quiz(String topic, int TOTAL_TIME){
+    public static void quiz(int TOTAL_TIME){
+        int questionsAccessed;
         Scanner input = new Scanner(System.in);
         String[][] arr = getQuestions();
         String[][] dataArr = new String[10][3];
-
+        if(TOTAL_TIME == 15){
+            questionsAccessed = 20;
+        }
+        else if(TOTAL_TIME == 12){
+            questionsAccessed = 30;
+        }
+        else{
+            questionsAccessed = 40;
+        }
         long startTime = System.currentTimeMillis();
         int totalQuestions = 10;
-
-        System.out.println("Your 10 minutes begin now!");
         //control loop using time and questions<10
         for (int i = 1; i <= totalQuestions; i++) {
         
@@ -270,7 +281,7 @@ public class QuizGameApplication {
             
 
             //Get a random question from array
-            int QNum = (int)(Math.random() * 10) + 1;
+            int QNum = (int)(Math.random() * questionsAccessed) + 1;
             int row = 0;
 
             //find index of the random question
@@ -289,7 +300,7 @@ public class QuizGameApplication {
 
             //take user's answers
             String userAnswer = "";
-            while(userAnswer == ""){
+            while(userAnswer.equals("")){
                 System.out.println("You Answer (A, B, C or D): ");
                 char choice = input.next().charAt(0);
                 if(choice == 'a' || choice == 'A'){
@@ -319,17 +330,16 @@ public class QuizGameApplication {
         double timeTaken = (endTime - startTime) / 1000.0;
         System.out.printf("\nYou took %.2f seconds.\n", timeTaken);
         input.close();
-        return dataArr;
+        result(dataArr, timeTaken, TOTAL_TIME);
     }
 
     /*
     result method receives an array from quiz method that contains questions asked,
     the correct answer and user's answer. It also receives time taken by user to solve the quiz.
     */
-    public static void result(String[][] arr){
+    public static void result(String[][] arr, double timeTaken, double TOTAL_TIME){
         Scanner input = new Scanner(System.in);
-        int timeTaken = 600;
-        if(timeTaken == 600){
+        if(timeTaken == TOTAL_TIME){
             System.out.println("You ran out of time :( Try again!");
         }
         else{

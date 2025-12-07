@@ -1,0 +1,277 @@
+What does CPU stand for?
+Central Processing Unit
+Computer Personal Unit
+Central Program Unit
+Control Processing Unit
+ Central Processing Unit
+
+Which device is used to point and click on a computer screen?
+Keyboard
+Mouse
+Printer
+Scanner
+ Mouse
+
+Which is an input device?
+Monitor
+Printer
+Keyboard
+Speaker
+ Keyboard
+
+What does RAM stand for?
+Random Access Memory
+Read Access Memory
+Run All Memory
+Read Any Memory
+Random Access Memory
+
+Which of these is an example of software?
+Mouse
+Monitor
+Microsoft Word
+Printer
+ Microsoft Word
+
+Which part of the computer stores data permanently?
+RAM
+ROM
+Cache
+Register
+ ROM
+
+Which is used to display information on a computer?
+Keyboard
+Monitor
+Mouse
+Scanner
+ Monitor
+
+What is the brain of the computer?
+CPU
+Hard Disk
+RAM
+Keyboard
+ CPU
+
+Which of these is a programming language?
+HTML
+Windows
+Linux
+Printer
+ HTML
+
+What is the main function of the operating system?
+Manage hardware and software
+Write documents
+Print files
+Design websites
+ Manage hardware and software
+
+Which device is used to store large amounts of data permanently?
+RAM
+Hard Disk
+CPU
+Keyboard
+ Hard Disk
+
+Which of the following is an output device?
+Keyboard
+Mouse
+Monitor
+Scanner
+ Monitor
+
+What is the full form of URL?
+Uniform Resource Locator
+Uniform Reference Link
+Unique Resource Locator
+Universal Reference Link
+ Uniform Resource Locator
+
+Which key combination is used to copy text?
+Ctrl + X
+Ctrl + C
+Ctrl + V
+Ctrl + Z
+ Ctrl + C
+
+What type of software is Microsoft Excel?
+Operating System
+Application Software
+Utility Software
+Programming Software
+ Application Software
+
+Which memory is volatile?
+RAM
+ROM
+Hard Disk
+CD-ROM
+RAM
+
+Which device is used to read barcodes?
+Scanner
+Printer
+Mouse
+Monitor
+ Scanner
+
+What is the shortcut for undo operation?
+Ctrl + Y
+Ctrl + Z
+Ctrl + X
+Ctrl + C
+ Ctrl + Z
+
+What is the main function of a router?
+To process data
+To manage printer
+To connect networks
+To display information
+ To connect networks
+
+Which of these is an example of an operating system?
+Windows 10
+Microsoft Word
+Python
+Google Chrome
+ Windows 10
+Which type of memory is non-volatile and can be electrically erased and reprogrammed?
+ROM
+RAM
+EPROM
+Cache
+ EPROM
+
+Which protocol is used to send emails over the Internet?
+HTTP
+FTP
+SMTP
+IMAP
+ SMTP
+
+What does BIOS stand for?
+Basic Input Output System
+Binary Integrated Operating System
+Basic Internet Operating Software
+Binary Input Output Service
+ Basic Input Output System
+
+Which device connects multiple computers within a local network?
+Switch
+Modem
+Printer
+Monitor
+ Switch
+
+What is the extension of a Microsoft Word document?
+. txt
+. docx
+. xlsx
+. pptx
+ .docx
+
+Which of the following is a type of malicious software?
+Firewall
+Antivirus
+Trojan
+Router
+Trojan
+
+What is the function of DNS on the Internet?
+Stores emails
+Translates domain names to IP addresses
+Filters spam
+Manages databases
+ Translates domain names to IP addresses
+
+Which of the following is a type of network topology?
+Star
+Circle
+Square
+Triangle
+ Star
+
+What is the main function of a compiler?
+To store data
+To convert high-level code into machine code
+To manage files
+To connect networks
+ To convert high-level code into machine code
+
+Which storage device uses flash memory and has no moving parts?
+Hard Disk
+CD-ROM
+SSD
+Floppy Disc
+ SSD
+Which algorithm is commonly used for secure data encryption?
+AES
+HTTP
+FTP
+SMTP
+ AES
+
+What does RAID stand for in computer storage systems?
+Redundant Array of Independent Disks
+Random Access of Internal Data
+Read and Insert Data
+Rapid Array of Internal Drives
+ Redundant Array of Independent Disks
+
+Which layer of the OSI model is responsible for reliable end-to-end communication?
+Physical
+Transport
+Network
+Data Link
+ Transport
+
+Which command is used to check network connectivity in most operating systems?
+ping
+ipconfig
+tracert
+netstat
+ ping
+
+What is the purpose of a hash function in computer security?
+Encrypt data
+Store passwords
+Generate unique fixed-size values from input
+Compress files
+ Generate unique fixed-size values from input
+
+Which type of database stores data in tables with rows and columns?
+NoSQL Database
+Relational Database
+Graph Database
+Document Database
+ Relational Database
+
+What is the main difference between SSD and HDD?
+SSD has moving parts; HDD does not
+SSD uses flash memory; HDD uses spinning disks
+SSD stores more data than HDD
+SSD is slower than HDD
+ SSD uses flash memory; HDD uses spinning disks
+
+Which programming paradigm focuses on objects and classes?
+Procedural Programming
+Functional Programming
+Object-Oriented Programming
+Logic Programming
+ Object-Oriented Programming
+
+What type of attack involves intercepting communication between two systems?
+Phishing
+Man-in-the-Middle
+DDoS
+SQL Inject
+ Man-in-the-Middle
+
+Which memory type is fastest in a computer system?
+Cache Memory
+RAM
+ROM
+Hard Disk
+ Cache Memory
