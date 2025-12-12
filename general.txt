@@ -1,274 +1,277 @@
+1
 What is the capital of France?
 Paris
 London
 Berlin
 Madrid
- Paris
-
+Paris
+2
 How many continents are there in the world?
 5
 6
 7
 8
- 7
-
+7
+3
 Which is the largest ocean on Earth?
 Atlantic Ocean
 Indian Ocean
 Arctic Ocean
 Pacific Ocean
- Pacific Ocean
-
+Pacific Ocean
+4
 Who is known as the “Father of the Nation” in India?
 Jawaharlal Nehru
 Mahatma Gandhi
 Subhash Chandra Bose
 B. R. Ambedkar
- Mahatma Gandhi
-
+Mahatma Gandhi
+5
 Which planet is called the Red Planet?
 Earth
 Mars
 Venus
 Jupiter
- Mars
-
+Mars
+6
 What is H₂O commonly known as?
 Salt
 Water
 Oxygen
 Hydrogen
- Water
-
+Water
+7
 How many days are there in a leap year?
 365
 364
 366
 367
- 366
-
+366
+8
 Which animal is known as the King of the Jungle?
 Tiger
 Elephant
 Lion
 Bear
 Lion
-
+9
 What do bees collect from flowers?
 Water
 Nectar
 Leaves
 Pollen
- Nectar
-
+Nectar
+10
 Which country is famous for the Eiffel Tower?
 Italy
 France
 Spain
 Germany
- France
-
+France
+11
 How many sides does a triangle have?
 2
 3
 4
 5
- 3
-
+3
+12
 Which is the largest planet in our solar system?
 Earth
 Jupiter
 Mars
 Venus
- Jupiter
-
+Jupiter
+13
 What is the main gas humans breathe?
 Oxygen
 Nitrogen
 Carbon Dioxide
 Hydrogen
- Oxygen
-
+Oxygen
+14
 Which color do you get by mixing red and blue?
 Green
 Purple
 Orange
 Yellow
 Purple
-
+15
 What is the fastest land animal?
 Tiger
 Cheetah
 Lion
 Horse
- Cheetah
-
+Cheetah
+16
 Which instrument measures temperature?
 Barometer
 Thermometer
 Hygrometer
 Compass
- Thermometer
-
+Thermometer
+17
 Who wrote “Romeo and Juliet”?
 Charles Dickens
 William Shakespeare
 Mark Twain
 Jane Austen
- William Shakespeare
-
+William Shakespeare
+18
 What is the boiling point of water in Celsius?
 90°C
 95°C
 100°C
 105°C
- 100°C
-
+100°C
+19
 Which bird is known for mimicking human speech?
 Crow
 Parrot
 Eagle
 Sparrow
- Parrot
-
+Parrot
+20
 Which is the smallest prime number?
 0
 1
 2
 3
- 2 
+2
+21
 Who invented the telephone?
 Alexander Graham Bell
 Thomas Edison
 Nikola Tesla
 James Watt
 Alexander Graham Bell
-
+22
 What is the currency of Japan?
 Yen
 Dollar
 Euro
 Pound
- Yen
-
+Yen
+23
 Which planet is known for its rings?
 Mars
 Jupiter
 Saturn
 Venus
- Saturn
-
+Saturn
+24
 Who wrote the national anthem of India?
 Rabindranath Tagore
 Bankim Chandra Chatterjee
 Sarojini Naidu
 Mahatma Gandhi
- Rabindranath Tagore
-
+Rabindranath Tagore
+25
 Which gas do plants release during photosynthesis?
 Oxygen
 Carbon Dioxide
 Nitrogen
 Hydrogen
- Oxygen
-
+Oxygen
+26
 What is the chemical symbol for gold?
 Au
 Ag
 Gd
 Go
- Au
-
+Au
+27
 Which country hosted the 2016 Summer Olympics?
 China
 Brazil
 UK
 Russia
- Brazil
-
+Brazil
+28
 Who was the first person to walk on the Moon?
 Buzz Aldrin
 Neil Armstrong
 Yuri Gagarin
 Michael Collins
- Neil Armstrong
-
+Neil Armstrong
+29
 Which is the largest desert in the world?
 Sahara
 Gobi
 Kalahari
 Antarctic
- Antarctic
-
+Antarctic
+30
 What is the SI unit of force?
 Joule
 Newton
 Pascal
 Watt
 Newton
+31
 Which element has the highest melting point?
 Tungsten
 Iron
 Carbon
 Osmium
- Tungsten
-
+Tungsten
+32
 Who was the first woman to win a Nobel Prize?
 Marie Curie
 Rosalind Franklin
 Ada Lovelace
 Dorothy Hodgkin
- Marie Curie
-
+Marie Curie
+33
 In which year did the Berlin Wall fall?
 1987
 1989
 1991
 1993
- 1989
-
+1989
+34
 What is the capital city of Mongolia?
 Ulaanbaatar
 Astana
 Hanoi
 Thimphu
- Ulaanbaatar
-
+Ulaanbaatar
+35
 Which planet has the longest day in the solar system?
 Mercury
 Venus
 Mars
 Jupiter
- Venus
-
+Venus
+36
 Who developed the first successful polio vaccine?
 Louis Pasteur
 Jonas Salk
 Edward Jenner
 Robert Koch
- Jonas Salk
-
+Jonas Salk
+37
 Which organelle is responsible for protein synthesis in a cell?
 Mitochondria
 Ribosome
 Nucleus
 Golgi Apparatus
- Ribosome
-
+Ribosome
+38
 Which is the deepest ocean trench in the world?
 Puerto Rico Trench
 Java Trench
 Mariana Trench
 Tonga Trench
- Mariana Trench
-
+Mariana Trench
+39
 Which country has the most official languages?
 India
 South Africa
 Switzerland
 Bolivia
- Bolivia
-
+Bolivia
+40
 Who is known as the “Father of Modern Physics”?
 Albert Einstein
 Isaac Newton

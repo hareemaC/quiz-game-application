@@ -1,272 +1,280 @@
+1
 What is the chemical formula of table salt?
- H₂O
- NaCl
- CO₂
- KCl
- NaCl
-
+H₂O
+NaCl
+CO₂
+KCl
+NaCl
+2
 Which planet has rings around it?
 Venus
- Mars
- Saturn
- Mercury
-  Saturn
-
+Mars
+Saturn
+Mercury
+Saturn
+3
 What do you call an animal that eats only plants?
 Herbivore
 Carnivore
- Omnivore
- Insectivore
-  Herbivore
-
+Omnivore
+Insectivore
+Herbivore
+4
 What is the smallest unit of life?
- Atom
- Cell
- Tissue
- Organ
-  Cell
+Atom
+Cell
+Tissue
+Organ
+Cell
+5
 What force pulls objects toward Earth?
- Friction
- Gravity
- Magnetism
- Pressure
-  Gravity
+Friction
+Gravity
+Magnetism
+Pressure
+Gravity
+6
 Which organ helps us breathe?
- Brain
- Lungs
- Stomach
+Brain
+Lungs
+Stomach
 Heart
-  Lungs
-
-What is the chemical symbol for water?
- H₂O
- CO₂
- O₂
- H₂
-  H₂O
-
-What planet is famous for its red color?
- Venus
- Mars
- Jupiter
- Neptune
- Mars
-
-Which is the largest organ in the human body?
- Liver
- Brain
- Skin
- Heart
-  Skin
-
-What is the main source of energy for the Earth?
- Moon
-Sun
- Stars
- Earth core
- Sun
-
-Which animal can live both on land and in water?
- Dog
- Frog
- Elephant
- Lion
-Frog
-Which gas do plants release during photosynthesis?
- Oxygen
- Carbon dioxide
- Nitrogen
- Hydrogen
-  Oxygen
-
-What is the chemical symbol for gold?
- Au
- Ag
- Go
- Gd
-  Au
-What is the main component of the sun?
- Oxygen
- Hydrogen
- Carbon
- Nitrogen
-  Hydrogen
-
-Which gas is used in balloons to make them float?
- Oxygen
- Helium
- Nitrogen
- Carbon dioxide
-  Helium
-
-What is the largest planet in the solar system?
- Saturn
- Jupiter
- Earth
- Neptune
-  Jupiter
-
-What do we call animals that eat both plants and meat?
- Herbivores
- Carnivores
- Omnivores
- Insectivores
- Omnivores
-
-Which part of the plant absorbs water?
- Leaf
- Stem
- Root
- Flower
-  Root
-How many bones are in the human body?
- 106
- 206
- 306
- 406
-206
-
-Which gas do plants release during photosynthesis?
- Oxygen
- Carbon dioxide
- Nitrogen
- Hydrogen
-  Oxygen
-Which part of the brain controls balance and coordination?
- Cerebrum
- Cerebellum
- Medulla
- Hypothalamus
-Cerebellum
-
-What type of bond is formed when electrons are shared between atoms?
- Ionic bond
- Covalent bond
- Hydrogen bond
- Metallic bond
-  Covalent bond
-
-What is the process by which plants lose water through leaves?
- Transpiration
- Respiration
- Photosynthesis
- Evaporation
-Transpiration
-
-Which blood cells help fight infections?
- Red blood cells
- White blood cells
- Platelets
- Plasma
-  White blood cells
-
-Which planet has the shortest day in the solar system?
- Jupiter
- Saturn
- Mercury
- Mars
-  Jupiter
-
-What is the SI unit of electric current?
- Volt
- Ampere
- Ohm
- Watt
-  Ampere
-
-Which gas is most abundant in the Earth's atmosphere?
- Oxygen
- Nitrogen
- Carbon dioxide
- Argon
-  Nitrogen
-
-What type of energy is stored in food?
- Kinetic energy
- Thermal energy
- Chemical energy
- Mechanical energy
-  Chemical energy
-
-Which organelle is called the “powerhouse of the cell”?
- Nucleus
-Ribosome
- Mitochondria
- Chloroplast
-  Mitochondria
-
-Which phenomenon explains why the sky appears blue?
- Reflection
- Refraction
- Dispersion
- Scattering
- Scattering
-What is the primary function of ribosomes in a cell?
- Energy production
- Protein synthesis
- DNA replication
- Photosynthesis
-  Protein synthesis
-
-Which law states that pressure and volume of a gas are inversely proportional at constant temperature?
- Charles's law
- Boyle's law
- Avogadro's law
- Newton’s law
-  Boyle's law
-
-What is the chemical formula of ozone?
- O₂
- O₃
- CO₂
- H₂O₂
-  O₃
-
-Which organ produces insulin in the human body?
- Liver
- Pancreas
- Kidney
- Gallbladder
-  Pancreas
-
-What is the process by which DNA makes RNA?
- Replication
- Transcription
- Translation
- Mutation
-  Transcription
-
-Which particle has a negative charge in an atom?
- Proton
- Electron
- Neutron
- Photon
- Electron
-
-Which planet has the strongest gravitational pull in the solar system?
- Earth
- Jupiter
- Saturn
- Neptune
-  Jupiter
-
-What is the pH of pure water at 25°C?
- 6
- 7
- 8
- 5
+Lungs
 7
-
+What is the chemical symbol for water?
+H₂O
+CO₂
+O₂
+H₂
+H₂O
+8
+What planet is famous for its red color?
+Venus
+Mars
+Jupiter
+Neptune
+Mars
+9
+Which is the largest organ in the human body?
+Liver
+Brain
+Skin
+Heart
+Skin
+10
+What is the main source of energy for the Earth?
+Moon
+Sun
+Stars
+Earth core
+Sun
+11
+Which animal can live both on land and in water?
+Dog
+Frog
+Elephant
+Lion
+Frog
+12
+Which gas do plants release during photosynthesis?
+Oxygen
+Carbon dioxide
+Nitrogen
+Hydrogen
+Oxygen
+13
+What is the chemical symbol for gold?
+Au
+Ag
+Go
+Gd
+Au
+14
+What is the main component of the sun?
+Oxygen
+Hydrogen
+Carbon
+Nitrogen
+Hydrogen
+15
+Which gas is used in balloons to make them float?
+Oxygen
+Helium
+Nitrogen
+Carbon dioxide
+Helium
+16
+What is the largest planet in the solar system?
+Saturn
+Jupiter
+Earth
+Neptune
+Jupiter
+17
+What do we call animals that eat both plants and meat?
+Herbivores
+Carnivores
+Omnivores
+Insectivores
+Omnivores
+18
+Which part of the plant absorbs water?
+Leaf
+Stem
+Root
+Flower
+Root
+19
+How many bones are in the human body?
+106
+206
+306
+406
+206
+20
+Which gas do plants release during photosynthesis?
+Oxygen
+Carbon dioxide
+Nitrogen
+Hydrogen
+Oxygen
+21
+Which part of the brain controls balance and coordination?
+Cerebrum
+Cerebellum
+Medulla
+Hypothalamus
+Cerebellum
+22
+What type of bond is formed when electrons are shared between atoms?
+Ionic bond
+Covalent bond
+Hydrogen bond
+Metallic bond
+Covalent bond
+23
+What is the process by which plants lose water through leaves?
+Transpiration
+Respiration
+Photosynthesis
+Evaporation
+Transpiration
+24
+Which blood cells help fight infections?
+Red blood cells
+White blood cells
+Platelets
+Plasma
+White blood cells
+25
+Which planet has the shortest day in the solar system?
+Jupiter
+Saturn
+Mercury
+Mars
+Jupiter
+26
+What is the SI unit of electric current?
+Volt
+Ampere
+Ohm
+Watt
+Ampere
+27
+Which gas is most abundant in the Earth's atmosphere?
+Oxygen
+Nitrogen
+Carbon dioxide
+Argon
+Nitrogen
+28
+What type of energy is stored in food?
+Kinetic energy
+Thermal energy
+Chemical energy
+Mechanical energy
+Chemical energy
+29
+Which organelle is called the “powerhouse of the cell”?
+Nucleus
+Ribosome
+Mitochondria
+Chloroplast
+Mitochondria
+30
+Which phenomenon explains why the sky appears blue?
+Reflection
+Refraction
+Dispersion
+Scattering
+Scattering
+31
+What is the primary function of ribosomes in a cell?
+Energy production
+Protein synthesis
+DNA replication
+Photosynthesis
+Protein synthesis
+32
+Which law states that pressure and volume of a gas are inversely proportional at constant temperature?
+Charles's law
+Boyle's law
+Avogadro's law
+Newton’s law
+Boyle's law
+33
+What is the chemical formula of ozone?
+O₂
+O₃
+CO₂
+H₂O₂
+O₃
+34
+Which organ produces insulin in the human body?
+Liver
+Pancreas
+Kidney
+Gallbladder
+Pancreas
+35
+What is the process by which DNA makes RNA?
+Replication
+Transcription
+Translation
+Mutation
+Transcription
+36
+Which particle has a negative charge in an atom?
+Proton
+Electron
+Neutron
+Photon
+Electron
+37
+Which planet has the strongest gravitational pull in the solar system?
+Earth
+Jupiter
+Saturn
+Neptune
+Jupiter
+38
+What is the pH of pure water at 25°C?
+6
+7
+8
+5
+7
+39
 Which scientist proposed the three laws of motion?
- Albert Einstein
- Isaac Newton
- Galileo Galilei
- James Clerk Maxwell
-  Isaac Newton
-
+Albert Einstein
+Isaac Newton
+Galileo Galilei
+James Clerk Maxwell
+Isaac Newton
+40
 Which type of electromagnetic wave has the highest frequency?
- Radio waves
- Microwaves
- X-rays
- Gamma rays
- Gamma rays
+Radio waves
+Microwaves
+X-rays
+Gamma rays
+Gamma rays
