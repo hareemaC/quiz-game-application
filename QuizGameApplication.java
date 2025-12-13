@@ -152,7 +152,8 @@ public class QuizGameApplication {
         
         if(start == 1){
             String playAgain;
-            System.out.println("Rules:");
+            
+            System.out.println("\nRules:");
             System.out.println("1. You get to choose a topic: Science, English, Math, Computers, or General.");
             System.out.println("2. You get to choose a level: Easy, Medium, or Hard.");
             System.out.println("3. Time per level: Easy = 15 mins, Medium = 12 mins, Hard = 10 mins.");
