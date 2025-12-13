@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.io.*;
 
@@ -7,17 +8,22 @@ public class QuizGameApplication {
     static String filePath = "users.txt";
 
     public static void main(String[] args) {
-
+        int choice;
         // ---------------- LOGIN MENU ----------------
         while (true) {
-            System.out.println("\n--- LOGIN MENU ---");
-            System.out.println("1. Sign Up");
-            System.out.println("2. Sign In");
-            System.out.println("3. Quit");
-            System.out.print("Choose an option: ");
-            int choice = sc.nextInt();
-            sc.nextLine();
-
+            try{
+                System.out.println("\n--- LOGIN MENU ---");
+                System.out.println("1. Sign Up");
+                System.out.println("2. Sign In");
+                System.out.println("3. Quit");
+                System.out.print("Choose an option: ");
+                choice = sc.nextInt();
+                sc.nextLine();
+            }catch(InputMismatchException e){
+                System.out.println("Enter a number!");
+                sc.nextLine();
+                continue;
+            }
             // SIGN UP
             if (choice == 1) {
                 System.out.print("Enter new username: ");
@@ -111,7 +117,7 @@ public class QuizGameApplication {
 
             // QUIT
             else if (choice == 3) {
-                System.out.println("Thank you for playing!");
+                System.out.println("Logged out.");
                 break;
             }
 
@@ -125,26 +131,61 @@ public class QuizGameApplication {
 
     // ---------------- HOW TO PLAY + TOPIC + LEVEL ---------------
     public static void startGame() {
-        System.out.println("\nWelcome to the Quiz Game!");
-        System.out.println("Rules:");
-        System.out.println("1. Choose a topic: Science, English, Math, Computers, or General.");
-        System.out.println("2. Choose a level: Easy, Medium, or Hard.");
-        System.out.println("3. Easy = 15 mins, Medium = 12 mins, Hard = 10 mins.");
-        System.out.println("4. Answer questions before time ends.");
-        System.out.println("5. Score will be calculated at the end.");
-        System.out.println("6. You can play again.\n");
+        System.out.println("\nWELCOME TO QUIZ GAME!");
 
-        String playAgain;
-        do {
-            String topic = chooseTopic();
-            int time = chooseLevel();
-            System.out.println("\nStarting quiz on: " + topic);
-            System.out.println("You have " + time + " minutes.");
-            // Here you can add quiz questions later
-            quiz(time);
-            System.out.print("\nDo you want to play again? (yes/no): ");
-            playAgain = sc.nextLine().toLowerCase();
-        } while (playAgain.equals("yes"));
+        int start;
+        while (true) {
+            try{
+                System.out.print("\n1. Start quiz\n2. Log out\nEnter choice: ");
+                start = sc.nextInt();
+
+                if (start == 2|| start == 1) {
+                    break; // valid input
+                } else {
+                    System.out.println("Please enter 1 or 2");
+                }
+            }catch(InputMismatchException e){
+                System.out.println("Please enter a number");
+                sc.nextLine();
+            }
+        }
+        
+        if(start == 1){
+            String playAgain;
+            System.out.println("Rules:");
+            System.out.println("1. You get to choose a topic: Science, English, Math, Computers, or General.");
+            System.out.println("2. You get to choose a level: Easy, Medium, or Hard.");
+            System.out.println("3. Time per level: Easy = 15 mins, Medium = 12 mins, Hard = 10 mins.");
+            System.out.println("4. Answer questions before time ends!");
+            System.out.println("5. Score will be calculated at the end.");
+            System.out.println("6. You can play again.\n");
+            do {
+                String topic = chooseTopic();
+                int time = chooseLevel();
+                System.out.println("\nStarting quiz on: " + topic);
+                System.out.println("You have " + time + " minutes.");
+
+                quiz(time);
+
+                // validate play-again input
+                while (true) {
+                    System.out.print("\nDo you want to play again? (Y/N): ");
+                    playAgain = sc.nextLine().trim().toLowerCase();
+
+                    if (playAgain.equals("y") || playAgain.equals("n")) {
+                        break; // valid input
+                    } else {
+                        System.out.println("Invalid input. Please enter Y or N.");
+                    }
+                }
+
+            } while (playAgain.equals("y"));
+        }
+        else{
+            System.out.println("Logged out.");
+        }
+
+
     }
 
     static String fileName = "";
@@ -222,7 +263,7 @@ public class QuizGameApplication {
         return time;
     }
 
-        // questions method will receive the specific file (chosen by the user's requirements) as an argument
+    // questions method will receive the specific file (chosen by the user's requirements) as an argument
     public static String[][] getQuestions(){
         String[][] questions = new String[40][7];
         try{
@@ -240,7 +281,7 @@ public class QuizGameApplication {
             }
             br.close();
         }catch(IOException e){
-            System.out.println("An erro occured");
+            System.out.println("An error occured");
         }
         return questions;
     }
@@ -249,88 +290,111 @@ public class QuizGameApplication {
     //send the array to the result method
     //send time taken to the result method
     public static void quiz(int TOTAL_TIME){
-        int questionsAccessed;
-        Scanner input = new Scanner(System.in);
-        String[][] arr = getQuestions();
-        String[][] dataArr = new String[10][3];
-        if(TOTAL_TIME == 15){
-            questionsAccessed = 20;
-        }
-        else if(TOTAL_TIME == 12){
-            questionsAccessed = 30;
-        }
-        else{
-            questionsAccessed = 40;
-        }
-        TOTAL_TIME = TOTAL_TIME * 60;
-        long startTime = System.currentTimeMillis();
-        int totalQuestions = 10;
-        //control loop using time and questions<10
-        for (int i = 1; i <= totalQuestions; i++) {
-        
-            long elapsed = (System.currentTimeMillis() - startTime) / 1000;
-            long remaining = TOTAL_TIME - elapsed;
-
-            if (remaining <= 0) {
-                System.out.println("\n Time is up! Quiz over.");
-                break;
+        try{
+            int questionsAccessed;
+            Scanner input = new Scanner(System.in);
+            String[][] arr = getQuestions();
+            String[][] dataArr = new String[10][3];
+            if(TOTAL_TIME == 15){
+                questionsAccessed = 20;
             }
+            else if(TOTAL_TIME == 12){
+                questionsAccessed = 30;
+            }
+            else{
+                questionsAccessed = 40;
+            }
+            TOTAL_TIME = TOTAL_TIME * 60;
+            long startTime = System.currentTimeMillis();
+            int totalQuestions = 10;
+            int[] usedQuestions = new int[10];
+            int usedCount = 0;
 
-            long minutes = remaining / 60;
-            long seconds = remaining % 60;
-            System.out.printf("Time left: %02d:%02d\n", minutes, seconds);
+            //control loop using time and questions<10
+            for (int i = 1; i <= totalQuestions; i++) {
             
+                long elapsed = (System.currentTimeMillis() - startTime) / 1000;
+                long remaining = TOTAL_TIME - elapsed;
 
-            //Get a random question from array
-            int QNum = (int)(Math.random() * questionsAccessed) + 1;
-            int row = 0;
+                if (remaining <= 0) {
+                    System.out.println("\n Time is up! Quiz over.");
+                    break;
+                }
 
-            //find index of the random question
-            while(!arr[row][0].equals(Integer.toString(QNum))){
-                row++;
-            } 
+                long minutes = remaining / 60;
+                long seconds = remaining % 60;
+                System.out.printf("Time left: %02d:%02d\n", minutes, seconds);
+                
 
-            //print question
-            System.out.println("Q" + i + ". " + arr[row][1]);
-            System.out.println("A) " + arr[row][2]);
-            System.out.println("B) " + arr[row][3]);
-            System.out.println("C) " + arr[row][4]);
-            System.out.println("D) " + arr[row][5]);
-            String answer = arr[row][6];
+                //Get a random question from array
+                int QNum;
+                boolean alreadyUsed;
 
+                do {
+                    QNum = (int)(Math.random() * questionsAccessed) + 1;
+                    alreadyUsed = false;
 
-            //take user's answers
-            String userAnswer = "";
-            while(userAnswer.equals("")){
-                System.out.println("You Answer (A, B, C or D): ");
-                char choice = input.next().charAt(0);
-                if(choice == 'a' || choice == 'A'){
-                    userAnswer = arr[row][2];
+                    for (int j = 0; j < usedCount; j++) {
+                        if (usedQuestions[j] == QNum) {
+                            alreadyUsed = true;
+                            break;
+                        }
+                    }
+                } while (alreadyUsed);
+
+                usedQuestions[usedCount++] = QNum;
+
+                //find index of the random question
+                int row = 0;
+                while(!arr[row][0].equals(Integer.toString(QNum))){
+                    row++;
+                } 
+
+                //print question
+                System.out.println("Q" + i + ". " + arr[row][1]);
+                System.out.println("A) " + arr[row][2]);
+                System.out.println("B) " + arr[row][3]);
+                System.out.println("C) " + arr[row][4]);
+                System.out.println("D) " + arr[row][5]);
+                String answer = arr[row][6];
+                
+
+                //take user's answers
+                String userAnswer = "";
+                while(userAnswer.equals("")){
+                    System.out.println("You Answer (A, B, C or D): ");
+                    char choice = input.next().charAt(0);
+                    if(choice == 'a' || choice == 'A'){
+                        userAnswer = arr[row][2];
+                    }
+                    else if(choice == 'b' || choice == 'B'){
+                        userAnswer = arr[row][3];
+                    }
+                    else if(choice == 'c' || choice == 'C'){
+                        userAnswer = arr[row][4];
+                    }
+                    else if(choice == 'd' || choice == 'D'){
+                        userAnswer = arr[row][5];
+                    }
+                    else{
+                        System.out.println("Invalid input. Enter again.");
+                        userAnswer = "";
+                    }
                 }
-                else if(choice == 'b' || choice == 'B'){
-                    userAnswer = arr[row][3];
-                }
-                else if(choice == 'c' || choice == 'C'){
-                    userAnswer = arr[row][4];
-                }
-                else if(choice == 'd' || choice == 'D'){
-                    userAnswer = arr[row][5];
-                }
-                else{
-                    System.out.println("Invalid input. Enter again.");
-                    userAnswer = "";
-                }
+                System.out.println();
+                System.out.println("-------------------------------------");
+                //store question, correct answer and user's answer in a 2D array
+                dataArr[i-1][0] = arr[row][1];
+                dataArr[i-1][1] = answer;
+                dataArr[i-1][2] = userAnswer;
             }
-            //store question, correct answer and user's answer in a 2D array
-            dataArr[i-1][0] = arr[row][1];
-            dataArr[i-1][1] = answer;
-            dataArr[i-1][2] = userAnswer;
-        }
 
-        long endTime = System.currentTimeMillis();
-        double timeTaken = (endTime - startTime) / 1000.0;
-        System.out.printf("\nYou took %.2f seconds.\n", timeTaken);
-        result(dataArr, timeTaken, TOTAL_TIME);
+            long endTime = System.currentTimeMillis();
+            double timeTaken = (endTime - startTime) / 1000.0;
+            result(dataArr, timeTaken, TOTAL_TIME);
+        }catch(Exception e){
+            System.out.println("Error:" + e);
+        }
     }
 
     /*
@@ -355,12 +419,14 @@ public class QuizGameApplication {
             System.out.println("          QUIZ RESULT SUMMARY        ");
             System.out.println("=====================================");
             System.out.println("Score: " + score + " / " + 10);
-            System.out.println("Time Taken: " + timeTaken);
+            long minutes = (int)timeTaken / 60;
+            long seconds = (int)timeTaken % 60;
+            System.out.printf("Time taken: %02d:%02d\n", minutes, seconds);
             if(score==10){
                 System.out.println("Excellent! That's a perfect score!");
             }
             else if(score >= 7){
-                System.out.println("Great job!");
+                System.out.println("That's an impressive score!");
             }
             else if(score>=4){
                 System.out.println("Not bad, keep practicing.");
