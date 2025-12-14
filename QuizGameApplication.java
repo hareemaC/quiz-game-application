@@ -2,6 +2,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.io.*;
 
+
 public class QuizGameApplication {
 
     static Scanner sc = new Scanner(System.in);
@@ -16,9 +17,13 @@ public class QuizGameApplication {
                 System.out.println("2. Sign In");
                 System.out.println("3. Quit");
                 System.out.print("Choose an option: ");
-                 choice = -1;
+                choice = -1;
 
             try {
+                if (!sc.hasNext()) {
+                    System.out.println("\nInput has been closed. Exiting the program.");
+                    break;
+                }
                 choice = sc.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input! Please enter a NUMBER.");
@@ -29,10 +34,14 @@ public class QuizGameApplication {
             
             // SIGN UP
             if (choice == 1) {
-                String newUser;
+                String newUser = "";
                 while(true){
                     System.out.println("* Username length: 4 - 30 *");
                     System.out.print("Enter new username: ");
+                    if (!sc.hasNext()) {
+                        System.out.println("\nInput has been closed. Exiting the program.");
+                        break;
+                    }
                     newUser = sc.nextLine();
                     if(newUser.length() < 4){
                         System.out.println("Username is too short. Try again.");
@@ -67,11 +76,15 @@ public class QuizGameApplication {
                     if (exists) {
                         System.out.println("Username already taken.");
                     } else {
-                        String newPass;
+                        String newPass = "";
 
                         while (true) {
                             System.out.println("* Password length: 8 - 30 *");
                             System.out.print("Enter new password: ");
+                            if (!sc.hasNext()) {
+                                System.out.println("\nInput has been closed. Exiting the program.");
+                                break;
+                            }                            
                             newPass = sc.nextLine();
 
                             if (newPass.length() < 8) {
@@ -107,8 +120,16 @@ public class QuizGameApplication {
             // SIGN IN
             else if (choice == 2) {
                 System.out.print("Enter username: ");
+                if (!sc.hasNext()) {
+                    System.out.println("\nInput has been closed. Exiting the program.");
+                    break;
+                } 
                 String user = sc.nextLine();
                 System.out.print("Enter password: ");
+                if (!sc.hasNext()) {
+                    System.out.println("\nInput has been closed. Exiting the program.");
+                    break;
+                } 
                 String pass = sc.nextLine();
 
                 try {
@@ -168,10 +189,14 @@ public class QuizGameApplication {
     public static void startGame() {
         System.out.println("\nWELCOME TO QUIZ GAME!");
 
-        int start;
+        int start = -1;
         while (true) {
             try{
                 System.out.print("\n1. Start quiz\n2. Log out\nEnter choice: ");
+                if (!sc.hasNext()) {
+                    System.out.println("\nInput has been closed. Exiting the program.");
+                    break;
+                }
                 start = sc.nextInt();
                 sc.nextLine();
 
@@ -187,7 +212,7 @@ public class QuizGameApplication {
         }
         
         if(start == 1){
-            String playAgain;
+            String playAgain = "";
             
             System.out.println("\nRules:");
             System.out.println("1. You get to choose a topic: Science, English, Math, Computers, or General.");
@@ -207,6 +232,10 @@ public class QuizGameApplication {
                 // validate play-again input
                 while (true) {
                     System.out.print("\nDo you want to play again? (Y/N): ");
+                    if (!sc.hasNext()) {
+                        System.out.println("\nInput has been closed. Exiting the program.");
+                        break;
+                    }
                     playAgain = sc.nextLine().trim().toLowerCase();
 
                     if (playAgain.equals("y") || playAgain.equals("n")) {
@@ -241,6 +270,10 @@ public class QuizGameApplication {
             int choice = -1;
 
             try {
+                if (!sc.hasNext()) {
+                    System.out.println("\nInput has been closed. Exiting the program.");
+                    break;
+                }
                 choice = sc.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input! Enter a NUMBER.");
@@ -291,6 +324,10 @@ public class QuizGameApplication {
              int choice = -1;
 
             try {
+                if (!sc.hasNext()) {
+                    System.out.println("\nInput has been closed. Exiting the program.");
+                    break;
+                }
                 choice = sc.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input! Enter a NUMBER.");
@@ -413,7 +450,7 @@ public class QuizGameApplication {
                     row++;
                 }
                 // if index not found search for another question num
-                if (row == arr.length) {
+                if (row == arr.length || arr[row][1] == null || arr[row][2] == null || arr[row][3] == null || arr[row][4] == null || arr[row][5] == null || arr[row][6] == null) {
                     i--;
                     continue;
                 }
@@ -432,6 +469,10 @@ public class QuizGameApplication {
                 String userAnswer = "";
                 while(userAnswer.equals("")){
                     System.out.println("You Answer (A, B, C or D): ");
+                    if (!sc.hasNext()) {
+                        System.out.println("Input closed.");
+                        return;
+                    }
                     char choice = sc.next().charAt(0);
                     sc.nextLine();
                     if(choice == 'a' || choice == 'A'){
@@ -503,14 +544,16 @@ public class QuizGameApplication {
                 System.out.println("Better luck next time!");
             }
             System.out.println("=====================================");
+            
             //ask the user "would you like to review your answer?"
-            boolean flag = false;
-            while(flag != true){
+            while(true){
                 System.out.print(("Would you like to review your answers?(Y/N) "));
-                char choice = sc.next().charAt(0);
-                sc.nextLine();
-                if(choice == 'y' || choice == 'Y'){
-                    flag = true;
+                if (!sc.hasNextLine()) {
+                    System.out.println("\nInput has been closed. Exiting the program.");
+                    return;
+                }
+                String choice = sc.nextLine().trim().toLowerCase();
+                if(choice.equals("y")){
                     //if yes then print the questions from the array and tell user which answers were correct
                     System.out.println("\n===== REVIEW =====");
                     for (int i = 0; i < questionsAnswered; i++) {
@@ -518,21 +561,22 @@ public class QuizGameApplication {
                         System.out.println("   Correct Answer: " + arr[i][1]);
                         System.out.println("   Your Answer   : " + arr[i][2]);
                         if (arr[i][1].equals(arr[i][2])) {
-                            System.out.println("   X Correct!\n");
+                            System.out.println("   :) Correct!\n");
                         } else {
-                            System.out.println("   :) Wrong!\n");
+                            System.out.println("    X Wrong!\n");
                         }
                     }
+                    break;
                 }
-                else if(choice == 'n' || choice == 'N'){
-                    flag = true;
+                else if(choice.equals("n")){
                     System.out.println("Thank you for playing!");
+                    break;
                     //if no then exit the result method
                 }
                 else{
                     System.out.println("Invalid input. Try again.");
                 }
-            }  
+            }
         }
     }
 }
