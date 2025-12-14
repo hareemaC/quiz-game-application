@@ -518,9 +518,9 @@ public class QuizGameApplication {
                         System.out.println("   Correct Answer: " + arr[i][1]);
                         System.out.println("   Your Answer   : " + arr[i][2]);
                         if (arr[i][1].equals(arr[i][2])) {
-                            System.out.println("   ✅ Correct!\n");
+                            System.out.println("   X Correct!\n");
                         } else {
-                            System.out.println("   ❌ Wrong!\n");
+                            System.out.println("   :) Wrong!\n");
                         }
                     }
                 }
