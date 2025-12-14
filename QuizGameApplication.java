@@ -22,7 +22,7 @@ public class QuizGameApplication {
             try {
                 if (!sc.hasNext()) {
                     System.out.println("\nInput has been closed. Exiting the program.");
-                    break;
+                    System.exit(0);
                 }
                 choice = sc.nextInt();
             } catch (InputMismatchException e) {
@@ -40,7 +40,7 @@ public class QuizGameApplication {
                     System.out.print("Enter new username: ");
                     if (!sc.hasNext()) {
                         System.out.println("\nInput has been closed. Exiting the program.");
-                        break;
+                        System.exit(0);
                     }
                     newUser = sc.nextLine();
                     if(newUser.length() < 4){
@@ -83,7 +83,7 @@ public class QuizGameApplication {
                             System.out.print("Enter new password: ");
                             if (!sc.hasNext()) {
                                 System.out.println("\nInput has been closed. Exiting the program.");
-                                break;
+                                System.exit(0);
                             }                            
                             newPass = sc.nextLine();
 
@@ -122,13 +122,13 @@ public class QuizGameApplication {
                 System.out.print("Enter username: ");
                 if (!sc.hasNext()) {
                     System.out.println("\nInput has been closed. Exiting the program.");
-                    break;
+                    System.exit(0);
                 } 
                 String user = sc.nextLine();
                 System.out.print("Enter password: ");
                 if (!sc.hasNext()) {
                     System.out.println("\nInput has been closed. Exiting the program.");
-                    break;
+                    System.exit(0);
                 } 
                 String pass = sc.nextLine();
 
@@ -195,7 +195,7 @@ public class QuizGameApplication {
                 System.out.print("\n1. Start quiz\n2. Log out\nEnter choice: ");
                 if (!sc.hasNext()) {
                     System.out.println("\nInput has been closed. Exiting the program.");
-                    break;
+                    System.exit(0);
                 }
                 start = sc.nextInt();
                 sc.nextLine();
@@ -234,7 +234,7 @@ public class QuizGameApplication {
                     System.out.print("\nDo you want to play again? (Y/N): ");
                     if (!sc.hasNextLine()) {
                         System.out.println("\nInput has been closed. Exiting the program.");
-                        break;
+                        System.exit(0);
                     }
                     playAgain = sc.nextLine().trim().toLowerCase();
 
@@ -272,7 +272,7 @@ public class QuizGameApplication {
             try {
                 if (!sc.hasNext()) {
                     System.out.println("\nInput has been closed. Exiting the program.");
-                    break;
+                    System.exit(0);
                 }
                 choice = sc.nextInt();
             } catch (InputMismatchException e) {
@@ -326,7 +326,7 @@ public class QuizGameApplication {
             try {
                 if (!sc.hasNext()) {
                     System.out.println("\nInput has been closed. Exiting the program.");
-                    break;
+                    System.exit(0);
                 }
                 choice = sc.nextInt();
             } catch (InputMismatchException e) {
@@ -550,7 +550,7 @@ public class QuizGameApplication {
                 System.out.print(("Would you like to review your answers?(Y/N) "));
                 if (!sc.hasNextLine()) {
                     System.out.println("\nInput has been closed. Exiting the program.");
-                    return;
+                    System.exit(0);
                 }
                 String choice = sc.nextLine().trim().toLowerCase();
                 if(choice.equals("y")){
