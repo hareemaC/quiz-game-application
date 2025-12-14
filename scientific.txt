@@ -132,12 +132,12 @@ How many bones are in the human body?
 406
 206
 20
-Which gas do plants release during photosynthesis?
-Oxygen
+Which gas do plants absorb during photosynthesis?
 Carbon dioxide
+Oxygen
 Nitrogen
 Hydrogen
-Oxygen
+Carbon dioxide
 21
 Which part of the brain controls balance and coordination?
 Cerebrum

@@ -124,9 +124,10 @@ public class QuizGameApplication {
 
                     while ((line = br.readLine()) != null) {
                         String passwordLine = br.readLine(); // password
+                        if(passwordLine == null) break;
                         if (line.equals(user)) {
                             foundUser = true;
-                            if (passwordLine.equals(pass)) {
+                            if (passwordLine.equals(pass) && passwordLine != null) {
                                 System.out.println("Login Successful! Welcome, " + user);
                                 startGame();
                                 System.out.println("Thank you for playing!");
@@ -315,7 +316,7 @@ public class QuizGameApplication {
         return time;
     }
 
-    // questions method will receive the specific file (chosen by the user's requirements) as an argument
+    // questions method will use the global file (chosen by the user's requirements)
     public static String[][] getQuestions(){
         String[][] questions = new String[40][7];
         try{
@@ -329,22 +330,31 @@ public class QuizGameApplication {
                 questions[index][4] = br.readLine();
                 questions[index][5] = br.readLine();
                 questions[index][6] = br.readLine();
+                if (questions[index][0] == null) {
+                    System.out.println("Question file is missing or invalid.");
+                    br.close();
+                    return new String[0][0];
+                }
                 index++;
             }
             br.close();
         }catch(IOException e){
             System.out.println("An error occured");
+            return new String[0][0];
         }
         return questions;
     }
 
-    // if level is easy only first 10 questions 
-    //send the array to the result method
-    //send time taken to the result method
+    // if level is easy only first 20 questions 
+    // send the array to the result method
+    // send time taken to the result method
     public static void quiz(int TOTAL_TIME){
         try{
             int questionsAccessed;
             String[][] arr = getQuestions();
+            if (arr.length == 0) {
+                return;
+            }
             String[][] dataArr = new String[10][3];
             if(TOTAL_TIME == 15){
                 questionsAccessed = 20;
@@ -399,7 +409,7 @@ public class QuizGameApplication {
 
                 //find index of the random question
                 int row = 0;
-                while (row < arr.length && !arr[row][0].equals(Integer.toString(QNum))) {
+                while (row < arr.length && arr[row][0] != null && !arr[row][0].equals(Integer.toString(QNum))) {
                     row++;
                 }
                 // if index not found search for another question num
@@ -503,7 +513,7 @@ public class QuizGameApplication {
                     flag = true;
                     //if yes then print the questions from the array and tell user which answers were correct
                     System.out.println("\n===== REVIEW =====");
-                    for (int i = 0; i < arr.length; i++) {
+                    for (int i = 0; i < questionsAnswered; i++) {
                         System.out.println("Q" + (i + 1) + ": " + arr[i][0]);
                         System.out.println("   Correct Answer: " + arr[i][1]);
                         System.out.println("   Your Answer   : " + arr[i][2]);
