@@ -2,7 +2,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.io.*;
 
-public class FINAL {
+public class quizgame1 {
 
     static Scanner sc = new Scanner(System.in);
     static String filePath = "users.txt";
@@ -11,22 +11,19 @@ public class FINAL {
         int choice;
         // ---------------- LOGIN MENU ----------------
         while (true) {
+            try{
                 System.out.println("\n--- LOGIN MENU ---");
                 System.out.println("1. Sign Up");
                 System.out.println("2. Sign In");
                 System.out.println("3. Quit");
                 System.out.print("Choose an option: ");
-                 choice = -1;
-
-            try {
                 choice = sc.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("Invalid input! Please enter a NUMBER.");
+                sc.nextLine();
+            }catch(InputMismatchException e){
+                System.out.println("Enter a number!");
                 sc.nextLine();
                 continue;
             }
-            sc.nextLine();
-            
             // SIGN UP
             if (choice == 1) {
                 System.out.print("Enter new username: ");
@@ -125,8 +122,7 @@ public class FINAL {
             }
 
             else {
-                System.out.println(  "Invalid choice! Please choose from 1-3.");
-                
+                System.out.println("Invalid choice. Try again!");
             }
         }
 
@@ -142,7 +138,6 @@ public class FINAL {
             try{
                 System.out.print("\n1. Start quiz\n2. Log out\nEnter choice: ");
                 start = sc.nextInt();
-                sc.nextLine();
 
                 if (start == 2|| start == 1) {
                     break; // valid input
@@ -207,15 +202,7 @@ public class FINAL {
             System.out.println("5. General");
             System.out.print("Enter option: ");
 
-            int choice = -1;
-
-            try {
-                choice = sc.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("Invalid input! Enter a NUMBER.");
-                sc.nextLine();
-                continue;
-            }
+            int choice = sc.nextInt();
             sc.nextLine();
 
             switch (choice) {
@@ -239,7 +226,7 @@ public class FINAL {
                     topic = "General"; 
                     fileName = "general.txt";
                     break;
-                default: System.out.println("Invalid choice! Choose from 1-5.");
+                default: System.out.println("Invalid topic! Try again.");
             }
         } while (topic.equals(""));
 
@@ -257,15 +244,7 @@ public class FINAL {
             System.out.println("3. Hard (10 min)");
             System.out.print("Enter option: ");
 
-             int choice = -1;
-
-            try {
-                choice = sc.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("Invalid input! Enter a NUMBER.");
-                sc.nextLine();
-                continue;
-            }
+            int choice = sc.nextInt();
             sc.nextLine();
 
             switch (choice) {
@@ -314,6 +293,7 @@ public class FINAL {
     public static void quiz(int TOTAL_TIME){
         try{
             int questionsAccessed;
+            Scanner input = new Scanner(System.in);
             String[][] arr = getQuestions();
             String[][] dataArr = new String[10][3];
             if(TOTAL_TIME == 15){
@@ -330,7 +310,6 @@ public class FINAL {
             int totalQuestions = 10;
             int[] usedQuestions = new int[10];
             int usedCount = 0;
-            int questionsAnswered = 0;
 
             //control loop using time and questions<10
             for (int i = 1; i <= totalQuestions; i++) {
@@ -345,7 +324,6 @@ public class FINAL {
 
                 long minutes = remaining / 60;
                 long seconds = remaining % 60;
-                System.out.println("-------------------------------------");
                 System.out.printf("Time left: %02d:%02d\n", minutes, seconds);
                 
 
@@ -369,31 +347,24 @@ public class FINAL {
 
                 //find index of the random question
                 int row = 0;
-                while (row < arr.length && !arr[row][0].equals(Integer.toString(QNum))) {
+                while(!arr[row][0].equals(Integer.toString(QNum))){
                     row++;
-                }
-                // if index not found search for another question num
-                if (row == arr.length) {
-                    i--;
-                    continue;
-                }
+                } 
 
                 //print question
-                System.out.println("-------------------------------------");
                 System.out.println("Q" + i + ". " + arr[row][1]);
                 System.out.println("A) " + arr[row][2]);
                 System.out.println("B) " + arr[row][3]);
                 System.out.println("C) " + arr[row][4]);
                 System.out.println("D) " + arr[row][5]);
                 String answer = arr[row][6];
-                System.out.println("-------------------------------------");
+                
 
                 //take user's answers
                 String userAnswer = "";
                 while(userAnswer.equals("")){
                     System.out.println("You Answer (A, B, C or D): ");
-                    char choice = sc.next().charAt(0);
-                    sc.nextLine();
+                    char choice = input.next().charAt(0);
                     if(choice == 'a' || choice == 'A'){
                         userAnswer = arr[row][2];
                     }
@@ -412,15 +383,16 @@ public class FINAL {
                     }
                 }
                 System.out.println();
+                System.out.println("-------------------------------------");
                 //store question, correct answer and user's answer in a 2D array
                 dataArr[i-1][0] = arr[row][1];
                 dataArr[i-1][1] = answer;
                 dataArr[i-1][2] = userAnswer;
-                questionsAnswered = i;
             }
+
             long endTime = System.currentTimeMillis();
             double timeTaken = (endTime - startTime) / 1000.0;
-            result(dataArr, timeTaken, TOTAL_TIME, questionsAnswered);
+            result(dataArr, timeTaken, TOTAL_TIME);
         }catch(Exception e){
             System.out.println("Error:" + e);
         }
@@ -430,14 +402,15 @@ public class FINAL {
     result method receives an array from quiz method that contains questions asked,
     the correct answer and user's answer. It also receives time taken by user to solve the quiz.
     */
-    public static void result(String[][] arr, double timeTaken, double TOTAL_TIME, int questionsAnswered){
-        if(timeTaken >= TOTAL_TIME){
-            System.out.println("You ran out of time :( Try playing again!");
+    public static void result(String[][] arr, double timeTaken, double TOTAL_TIME){
+        Scanner input = new Scanner(System.in);
+        if(timeTaken == TOTAL_TIME){
+            System.out.println("You ran out of time :( Try again!");
         }
         else{
             //first the user's answers are compared to the correct answers and a counter is incremented for every correct ans.
             int score = 0;
-            for(int i = 0; i < questionsAnswered; i++){
+            for(int i = 0; i < 10; i++){
                 if(arr[i][1].equals(arr[i][2])){
                     score++;
                 }
@@ -466,8 +439,7 @@ public class FINAL {
             boolean flag = false;
             while(flag != true){
                 System.out.print(("Would you like to review your answers?(Y/N) "));
-                char choice = sc.next().charAt(0);
-                sc.nextLine();
+                char choice = input.next().charAt(0);
                 if(choice == 'y' || choice == 'Y'){
                     flag = true;
                     //if yes then print the questions from the array and tell user which answers were correct
