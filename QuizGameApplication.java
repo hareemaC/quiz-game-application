@@ -13,8 +13,8 @@ public class QuizGameApplication {
         // ---------------- LOGIN MENU ----------------
         while (true) {
                 System.out.println("\n--- LOGIN MENU ---");
-                System.out.println("1. Sign Up");
-                System.out.println("2. Sign In");
+                System.out.println("1. Sign Up (New User)");
+                System.out.println("2. Sign In (Old User)");
                 System.out.println("3. Quit");
                 System.out.print("Choose an option: ");
                 choice = -1;
@@ -376,7 +376,7 @@ public class QuizGameApplication {
             }
             br.close();
         }catch(IOException e){
-            System.out.println("An error occured");
+            System.out.println("Question file not found!");
             return new String[0][0];
         }
         return questions;
