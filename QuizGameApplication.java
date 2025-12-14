@@ -232,7 +232,7 @@ public class QuizGameApplication {
                 // validate play-again input
                 while (true) {
                     System.out.print("\nDo you want to play again? (Y/N): ");
-                    if (!sc.hasNext()) {
+                    if (!sc.hasNextLine()) {
                         System.out.println("\nInput has been closed. Exiting the program.");
                         break;
                     }
